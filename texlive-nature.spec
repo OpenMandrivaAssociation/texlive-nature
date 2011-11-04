@@ -1,3 +1,9 @@
+# revision 21819
+# category Package
+# catalog-ctan /macros/latex/contrib/nature
+# catalog-date 2008-09-15 13:49:48 +0200
+# catalog-license noinfo
+# catalog-version 1.0
 Name:		texlive-nature
 Version:	1.0
 Release:	1
@@ -40,6 +46,7 @@ to produce papers in a format acceptable to the publisher.
 %{_texmfdistdir}/tex/latex/nature/nature.cls
 %doc %{_texmfdistdir}/doc/latex/nature/README
 %doc %{_texmfdistdir}/doc/latex/nature/nature-template.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -50,3 +57,5 @@ to produce papers in a format acceptable to the publisher.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
