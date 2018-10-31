@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-nature
 Version:	1.0
-Release:	10
+Release:	11
 Summary:	Prepare papers for the journal Nature
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/nature
