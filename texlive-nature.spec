@@ -1,18 +1,12 @@
-# revision 21819
-# category Package
-# catalog-ctan /macros/latex/contrib/nature
-# catalog-date 2008-09-15 13:49:48 +0200
-# catalog-license noinfo
-# catalog-version 1.0
 Name:		texlive-nature
-Version:	1.0
-Release:	11
+Version:	21819
+Release:	1
 Summary:	Prepare papers for the journal Nature
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/nature
 License:	NOINFO
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nature.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nature.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nature.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nature.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ This class and BibTeX style provide what seems to be necessary
 to produce papers in a format acceptable to the publisher.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -40,24 +34,10 @@ to produce papers in a format acceptable to the publisher.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 754249
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 719102
-- texlive-nature
-- texlive-nature
-- texlive-nature
-- texlive-nature
-
