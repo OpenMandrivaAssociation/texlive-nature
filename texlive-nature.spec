@@ -1,6 +1,6 @@
 Name:		texlive-nature
 Version:	21819
-Release:	1
+Release:	2
 Summary:	Prepare papers for the journal Nature
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/nature
