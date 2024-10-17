@@ -3,7 +3,7 @@ Version:	21819
 Release:	2
 Summary:	Prepare papers for the journal Nature
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/nature
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/nature
 License:	NOINFO
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nature.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nature.doc.r%{version}.tar.xz
